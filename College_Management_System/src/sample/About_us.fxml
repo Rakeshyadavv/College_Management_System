@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.About_usController">
+   <children>
+      <Pane prefHeight="95.0" prefWidth="800.0" style="-fx-background-color: #1e84d0;">
+         <children>
+            <ImageView fitHeight="77.0" fitWidth="89.0" layoutX="360.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/JNIT.png.png" />
+               </image>
+            </ImageView>
+            <Text fill="#f8f8f8" layoutX="341.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="College Management" underline="true" wrappingWidth="132.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <GridPane alignment="CENTER" hgap="5.0" layoutX="14.0" layoutY="65.0" prefHeight="20.0" prefWidth="70.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#home" prefHeight="20.0" prefWidth="30.0" style="-fx-background-color: #1e84d0;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/icons8-home-100.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#back" prefHeight="20.0" prefWidth="30.0" style="-fx-background-color: #1e84d0;" GridPane.columnIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/icons8-left-100.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </GridPane>
+         </children></Pane>
+      <Label layoutX="34.0" layoutY="122.0" text="About us" underline="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="36.0" layoutY="156.0" prefHeight="157.0" prefWidth="728.0" text="JaganNath Gupta Memorial Educational Society is a registered non-profit organization imparting quality professional and technical &#10;education to generate highly qualified and skilled technocrats. To fill the void in the industry demand, the society has ventured&#10;into establishing number of globally competitive institutes in Delhi and Jaipur for technical and management education at both &#10;undergraduate and postgraduate levels.&#10;&#10;The intrinsic aim of the society is to harbour technical excellence. Further to keep its commitment, the society provides scholarships &#10;to deserving students so that they can successfully take up the role of entrepreneurs and translate their dreams into reality.&#10;" />
+      <ImageView fitHeight="86.0" fitWidth="207.0" layoutX="34.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/hostl1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="207.0" layoutX="292.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/DSC_50981.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="207.0" layoutX="577.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/download.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="88.0" layoutY="522.0" prefHeight="35.0" prefWidth="659.0" text="Developed By : Pankaj Kumar, Anish Kumar Yadav,  Sawan Kumar Mahawar, Rakesh Yadav" textFill="#3e2626">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddStaffController">
+   <children>
+      <JFXButton layoutX="20.0" layoutY="102.0" prefHeight="34.0" prefWidth="164.0" style="-fx-background-color: #1e84d0;" text="Staff form">
+         <font>
+            <Font size="15.0" />
+         </font></JFXButton>
+      <ScrollPane hbarPolicy="NEVER" layoutX="22.0" layoutY="145.0" prefHeight="400.0" prefWidth="742.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <content>
+            <Pane prefHeight="860.0" prefWidth="742.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <JFXButton layoutX="2.0" prefHeight="25.0" prefWidth="740.0" style="-fx-background-color: #a9d4d9;" text="STAFF INFO" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="33.0" style="-fx-background-color: #ffffff;" text="Staff Name" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherFirstName" alignment="CENTER" layoutX="2.0" layoutY="68.0" promptText="First Name" />
+                  <TextField fx:id="teacherLastName" alignment="CENTER" layoutX="163.0" layoutY="68.0" promptText="Last Name" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="373.0" layoutY="33.0" style="-fx-background-color: #ffffff;" text="Staff Father's Name" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherFatherFirstName" alignment="CENTER" layoutX="373.0" layoutY="68.0" promptText="First Name" />
+                  <TextField fx:id="teacherFatherLastName" alignment="CENTER" layoutX="534.0" layoutY="68.0" promptText="Last Name" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="95.0" style="-fx-background-color: #ffffff;" text=" Mother's Name" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherMotherFirstName" alignment="CENTER" layoutX="2.0" layoutY="130.0" promptText="First Name" />
+                  <TextField fx:id="teacherMotherLastName" alignment="CENTER" layoutX="163.0" layoutY="130.0" promptText="Last Name" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="374.0" layoutY="100.0" style="-fx-background-color: #ffffff;" text="E-Mail" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherStudentMailId" alignment="CENTER" layoutX="374.0" layoutY="130.0" onKeyReleased="#validatestu" promptText="abc@example.com" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="537.0" layoutY="100.0" style="-fx-background-color: #ffffff;" text="Phone Number" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherPhoneNumber" alignment="CENTER" layoutX="536.0" layoutY="130.0" promptText="+91 - XXXXXXXXXX" />
+                  <Label accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="157.0" prefWidth="103.0" style="-fx-background-color: #ffffff;" text="Date Of Birth" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="167.0" layoutY="157.0" style="-fx-background-color: #ffffff;" text="Gender" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="teacherDateOfBirth" layoutX="2.0" layoutY="193.0" prefHeight="25.0" prefWidth="149.0" />
+                  <TextField fx:id="teacherGender" alignment="CENTER" layoutX="163.0" layoutY="193.0" promptText="Male/Female" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="219.0" style="-fx-background-color: #ffffff;" text="Local Address" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherStreetAdd" alignment="CENTER" layoutX="2.0" layoutY="251.0" prefHeight="25.0" prefWidth="412.0" promptText="Street Address" />
+                  <TextField fx:id="teacherCity" alignment="CENTER" layoutX="2.0" layoutY="283.0" prefHeight="25.0" prefWidth="132.0" promptText="City" />
+                  <TextField fx:id="teacherState" alignment="CENTER" layoutX="142.0" layoutY="283.0" prefHeight="25.0" prefWidth="132.0" promptText="State" />
+                  <TextField fx:id="teacherZipcode" alignment="CENTER" layoutX="282.0" layoutY="283.0" prefHeight="25.0" prefWidth="132.0" promptText="Zipcode" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="310.0" style="-fx-background-color: #ffffff;" text="Pan Card" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherPanCard" alignment="CENTER" layoutX="3.0" layoutY="340.0" promptText="eg: ABCDEXXXXF" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="239.0" layoutY="311.0" style="-fx-background-color: #ffffff;" text="Adhaar Card Number" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherAdharCard" alignment="CENTER" layoutX="237.0" layoutY="341.0" prefHeight="25.0" prefWidth="177.0" promptText="eg: XXXX XXXX XXX" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="367.0" style="-fx-background-color: #ffffff;" text="Staff-id" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherId" alignment="CENTER" layoutX="3.0" layoutY="397.0" prefHeight="25.0" prefWidth="193.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="424.0" style="-fx-background-color: #ffffff;" text="Emergency Contact(If Parent/Guardian cannot reach)" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherEmergencyName" alignment="CENTER" layoutX="3.0" layoutY="458.0" prefHeight="25.0" prefWidth="140.0" promptText="Person Name" />
+                  <TextField fx:id="teacherEmergencyRelation" alignment="CENTER" layoutX="221.0" layoutY="458.0" prefHeight="25.0" prefWidth="140.0" promptText="Relation with Student" />
+                  <TextField fx:id="teacherEmergencyContact" alignment="CENTER" layoutX="448.0" layoutY="458.0" prefHeight="25.0" prefWidth="140.0" promptText="Contact Number" />
+                  <JFXButton layoutX="2.0" layoutY="498.0" prefHeight="25.0" prefWidth="740.0" style="-fx-background-color: #a9d4d9;" text="Paying Details" />
+                  <TextField fx:id="teacherBasicPay" alignment="CENTER" layoutX="2.0" layoutY="575.0" promptText="IN INR" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="537.0" style="-fx-background-color: #ffffff;" text="Basic Pay" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherHRA" alignment="CENTER" layoutX="203.0" layoutY="575.0" promptText="IN INR" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="201.0" layoutY="537.0" style="-fx-background-color: #ffffff;" text="HRA " textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherBonus" alignment="CENTER" layoutX="396.0" layoutY="575.0" promptText="IN INR" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="394.0" layoutY="537.0" style="-fx-background-color: #ffffff;" text="Bonus " textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherPerformance" alignment="CENTER" layoutX="585.0" layoutY="575.0" promptText="IN INR" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="570.0" layoutY="537.0" style="-fx-background-color: #ffffff;" text="Performance Incentive" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="studentEmailStatus" layoutX="436.0" layoutY="109.0" />
+                  <Label fx:id="parEmailStatus" layoutX="120.0" layoutY="166.0" />
+                  <TextField fx:id="PF" alignment="CENTER" layoutX="2.0" layoutY="639.0" promptText="IN INR" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="601.0" style="-fx-background-color: #ffffff;" text="PF" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="ESI" alignment="CENTER" layoutX="203.0" layoutY="639.0" promptText="IN INR" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="201.0" layoutY="601.0" style="-fx-background-color: #ffffff;" text="ESI" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TeacherTransportationFee" alignment="CENTER" layoutX="396.0" layoutY="639.0" promptText="IN INR" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="394.0" layoutY="601.0" style="-fx-background-color: #ffffff;" text="Transportation Fee" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="2.0" layoutY="679.0" prefHeight="25.0" prefWidth="740.0" style="-fx-background-color: #a9d4d9;" text="BANK DETAILS" />
+                  <TextField fx:id="teacherAccountNumber" alignment="CENTER" layoutX="2.0" layoutY="756.0" promptText="IN INR" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="718.0" style="-fx-background-color: #ffffff;" text="Account No." textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherAccountName" alignment="CENTER" layoutX="203.0" layoutY="756.0" promptText="IN INR" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="201.0" layoutY="718.0" style="-fx-background-color: #ffffff;" text="Name On Account" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherCustId" alignment="CENTER" layoutX="396.0" layoutY="756.0" promptText="IN INR" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="394.0" layoutY="718.0" style="-fx-background-color: #ffffff;" text="Cust Id" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherIFSCCode" alignment="CENTER" layoutX="591.0" layoutY="756.0" promptText="IN INR" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="589.0" layoutY="718.0" style="-fx-background-color: #ffffff;" text="IFSC Code" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherAccountBranch" alignment="CENTER" layoutX="2.0" layoutY="820.0" prefHeight="25.0" prefWidth="352.0" promptText="IN INR" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="782.0" style="-fx-background-color: #ffffff;" text="Branch" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="teacherBranchCode" alignment="CENTER" layoutX="396.0" layoutY="820.0" promptText="IN INR" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="394.0" layoutY="782.0" style="-fx-background-color: #ffffff;" text="Branch Code" textFill="#1e84d0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+      <Pane prefHeight="95.0" prefWidth="800.0" style="-fx-background-color: #1e84d0;">
+         <children>
+            <ImageView fitHeight="77.0" fitWidth="89.0" layoutX="360.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/JNIT.png.png" />
+               </image>
+            </ImageView>
+            <Text fill="#f8f8f8" layoutX="341.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="College Management" underline="true" wrappingWidth="132.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <JFXButton layoutX="612.0" layoutY="102.0" onAction="#uploadTeacherInfo" prefHeight="34.0" prefWidth="164.0" style="-fx-background-color: #1e84d0;" text="Save">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <GridPane alignment="CENTER" hgap="5.0" layoutX="14.0" layoutY="65.0" prefHeight="20.0" prefWidth="70.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#home" prefHeight="20.0" prefWidth="30.0" style="-fx-background-color: #1e84d0;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8-home-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#back" prefHeight="20.0" prefWidth="30.0" style="-fx-background-color: #1e84d0;" GridPane.columnIndex="1">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8-left-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
